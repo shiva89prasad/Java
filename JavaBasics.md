@@ -196,7 +196,7 @@ Test.java
 Test.class
 ```
 
-[⬆ Back to JDK, JRE & JVM Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -218,7 +218,7 @@ Modern Java distributions are generally centered around the **JDK**. Oracle no l
 
 > JRE historically provided the runtime environment required to execute Java applications, including the JVM and Java libraries. With modern Java releases, applications are commonly run using a JDK or a custom runtime image.
 
-[⬆ Back to JDK, JRE & JVM Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -596,7 +596,7 @@ final method   → Cannot be overridden
 final class    → Cannot be extended
 ```
 
-[⬆ Back to `final` vs `finally` vs `finalize()` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -814,7 +814,7 @@ System.out.println("Hello");
 
 means that the `println()` method is being called on the `PrintStream` object referenced by `System.out`.
 
-[⬆ Back to `System.out.println()` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -839,7 +839,7 @@ System.out.println("Hello");
 
 Here, `System` refers to the `java.lang.System` class.
 
-[⬆ Back to `System.out.println()` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -865,7 +865,7 @@ out
 PrintStream
 ```
 
-[⬆ Back to `System.out.println()` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -951,7 +951,7 @@ Stack Frame
 
 The variable belongs to the current method invocation.
 
-[⬆ Back to Primitive Data Types & Memory Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -988,7 +988,7 @@ The object and its instance fields are associated with heap memory.
 
 The reference variable `student` belongs to the current stack frame in this conceptual model.
 
-[⬆ Back to Primitive Data Types & Memory Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
