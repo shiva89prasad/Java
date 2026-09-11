@@ -160,7 +160,7 @@ Here, `Employee` is a class.
 
 > A class is a blueprint or template that defines the state and behavior of objects. It can contain fields, methods, constructors, and other members.
 
-[⬆ Back to Class Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -208,7 +208,7 @@ new Employee()  → Object
 
 > An object is a runtime instance of a class. It has state represented by fields, behavior represented by methods, and identity associated with that particular instance.
 
-[⬆ Back to Object Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -246,7 +246,7 @@ System.out.println(employee.getClass());
 
 > `Object` is the root class of Java's class hierarchy. It provides common methods such as `equals()`, `hashCode()`, `toString()`, `getClass()`, `clone()`, `wait()`, `notify()`, and `notifyAll()`.
 
-[⬆ Back to Object Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -334,7 +334,7 @@ class EmployeeService {
 
 > The most common way is using the `new` keyword. Other approaches include reflection, cloning, deserialization, factory methods, and dependency injection frameworks such as Spring.
 
-[⬆ Back to Object Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -377,7 +377,7 @@ The field cannot be directly accessed from outside the class.
 
 > Encapsulation is the process of wrapping data and behavior together and controlling access to the internal state of an object.
 
-[⬆ Back to Encapsulation Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
