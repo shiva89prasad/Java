@@ -1,7 +1,5 @@
 # 🧩 Core Java – OOPs Concepts
 
-A structured collection of **Core Java OOPs interview questions and answers**, organized topic-wise for Java Backend Developer interview preparation.
-
 ---
 
 ## ❓ Questions
