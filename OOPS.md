@@ -422,7 +422,7 @@ the class controls how the balance can be modified.
 
 > We achieve encapsulation mainly by making fields private and providing controlled access through methods. This also allows us to apply validation and protect the object's internal state.
 
-[⬆ Back to Encapsulation Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -473,7 +473,7 @@ Java does not support multiple inheritance of classes.
 
 > Inheritance allows a child class to acquire accessible properties and behavior from a parent class. In Java, class inheritance is achieved using `extends`.
 
-[⬆ Back to Inheritance Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -537,7 +537,7 @@ class C implements A, B {
 
 > Java does not support multiple inheritance of classes mainly to avoid ambiguity such as the Diamond Problem. However, Java supports multiple inheritance of type through interfaces, with rules to resolve default-method conflicts.
 
-[⬆ Back to Inheritance Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -567,7 +567,7 @@ class Child implements InterfaceA, InterfaceB {
 
 > Multiple inheritance cannot be achieved using abstract classes because Java allows a class to extend only one class. Multiple inheritance of type can be achieved through interfaces.
 
-[⬆ Back to Inheritance Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -633,7 +633,7 @@ The actual implementation is selected at runtime.
 
 > Polymorphism means one interface or reference can represent multiple forms. Compile-time polymorphism is achieved through method overloading, while runtime polymorphism is achieved through method overriding.
 
-[⬆ Back to Polymorphism Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -678,7 +678,7 @@ we use the `List` abstraction without needing to know all internal implementatio
 
 > Abstraction focuses on what an object does rather than how it does it. In Java, it is mainly achieved using abstract classes and interfaces.
 
-[⬆ Back to Abstraction Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -710,7 +710,7 @@ abstract class Vehicle {
 
 > If a class contains an abstract method, that class must be declared abstract. Otherwise, the compiler reports an error.
 
-[⬆ Back to Abstraction Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -741,7 +741,7 @@ This is commonly used for runtime polymorphism.
 
 > We cannot directly create an object of an abstract class because it may contain abstract methods without implementations. But we can create a reference of the abstract class type pointing to a concrete subclass object.
 
-[⬆ Back to Abstraction Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -786,7 +786,7 @@ The parent constructor initializes the parent portion of the child object.
 
 > Abstract classes can have constructors because the constructor is used to initialize common state when a subclass object is created.
 
-[⬆ Back to Abstraction Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -845,7 +845,7 @@ double add(int a, int b) {
 
 > Method overloading occurs when multiple methods have the same name but different parameter lists. It is an example of compile-time polymorphism.
 
-[⬆ Back to Method Overloading Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -888,7 +888,7 @@ The parameter list must be different.
 
 Changing only the return type does not work.
 
-[⬆ Back to Method Overloading Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -945,7 +945,7 @@ The method is selected based on the actual object at runtime.
 * `private` methods cannot be overridden.
 * `static` methods are hidden, not overridden.
 
-[⬆ Back to Method Overriding Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -967,7 +967,7 @@ They are associated with the class rather than participating in runtime method d
 
 > We cannot override the main method because it is static. Static methods are hidden rather than overridden.
 
-[⬆ Back to Method Overriding Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -989,7 +989,7 @@ public static void main(int value) {
 
 This is valid method overloading.
 
-[⬆ Back to Method Overriding Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1012,7 +1012,7 @@ is an overloaded method, but it is not the standard entry point.
 
 Therefore, the launcher starts execution through the recognized `main(String[] args)` method.
 
-[⬆ Back to Method Overriding Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1032,7 +1032,7 @@ Therefore, the launcher starts execution through the recognized `main(String[] a
 
 > Overloading means same method name with different parameters and provides compile-time polymorphism. Overriding means a subclass provides a new implementation of an inherited method and provides runtime polymorphism.
 
-[⬆ Back to Method Overriding Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1080,7 +1080,7 @@ class Car extends Vehicle {
 
 > An abstract class is a partially implemented class that can contain both abstract and concrete methods. It is useful when related classes need to share common state and behavior.
 
-[⬆ Back to Abstract Class Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1104,7 +1104,7 @@ Vehicle vehicle =
 
 is valid because `Car` is concrete.
 
-[⬆ Back to Abstract Class Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1125,7 +1125,7 @@ abstract class Employee {
 
 When a subclass object is created, the abstract class constructor is executed.
 
-[⬆ Back to Abstract Class Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1142,7 +1142,7 @@ abstract class Vehicle {
 
 A concrete subclass must implement the abstract method unless the subclass is also abstract.
 
-[⬆ Back to Abstract Class Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1186,7 +1186,7 @@ class CreditCardPayment
 
 > An interface defines a contract or capability that classes can implement. It is commonly used to achieve abstraction, loose coupling, and multiple inheritance of type.
 
-[⬆ Back to Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1224,7 +1224,7 @@ Use an interface when you want:
 
 > I prefer an abstract class when closely related classes need shared state or implementation. I prefer an interface when I need to define a contract or capability that can have multiple implementations.
 
-[⬆ Back to Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1259,7 +1259,7 @@ interface C extends A, B {
 }
 ```
 
-[⬆ Back to Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1293,7 +1293,7 @@ class Machine
 
 This is one of the ways Java supports multiple inheritance of type.
 
-[⬆ Back to Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1322,7 +1322,7 @@ class Car implements Vehicle {
 
 If two interfaces provide conflicting default methods, the implementing class must resolve the conflict.
 
-[⬆ Back to Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1384,7 +1384,7 @@ This is **method hiding**, not overriding.
 
 > A final method cannot be overridden, a private method is not inherited and therefore cannot be overridden, and a static method is associated with the class and can only be hidden.
 
-[⬆ Back to Final, Private and Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1463,7 +1463,7 @@ class Child extends Parent {
 
 > The `super` keyword is used to access the immediate parent class's fields and methods and to invoke the parent class constructor.
 
-[⬆ Back to `super` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1520,7 +1520,7 @@ class Employee {
 
 > The `this` keyword refers to the current object. It is commonly used to access instance variables, resolve variable shadowing, invoke another constructor, and pass or return the current object.
 
-[⬆ Back to `this` Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1554,7 +1554,7 @@ class Employee {
 
 > A constructor is a special member of a class that is invoked during object creation and is mainly used to initialize the object's state.
 
-[⬆ Back to Constructor Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1588,7 +1588,7 @@ If you do not declare any constructor, the compiler provides a default no-argume
 
 But once you declare a constructor, the compiler does not automatically provide a no-argument constructor.
 
-[⬆ Back to Constructor Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1630,7 +1630,7 @@ class Utility {
 }
 ```
 
-[⬆ Back to Constructor Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1656,7 +1656,7 @@ class Employee {
 
 This is constructor overloading.
 
-[⬆ Back to Constructor Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1681,7 +1681,7 @@ class Calculator {
 
 Changing only the return type is not enough.
 
-[⬆ Back to Constructor Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1714,7 +1714,7 @@ All Employee objects can share the same static variable.
 
 > The static keyword is used to define class-level members that belong to the class rather than individual objects.
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1778,7 +1778,7 @@ class Outer {
 }
 ```
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1810,7 +1810,7 @@ Global/static state can make it difficult to understand where data is coming fro
 
 > Static is useful for class-level functionality, but overusing it can introduce shared state, increase coupling, make testing harder, and reduce flexibility. In backend applications, I prefer dependency injection for services and dependencies instead of relying heavily on static state.
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1836,7 +1836,7 @@ The reason is that the launcher needs to invoke the entry point without first cr
 
 > The main method is static so that the Java launcher can invoke it without creating an object of the class first.
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1873,7 +1873,7 @@ Main
 
 Static blocks execute in the order in which they appear during class initialization.
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1919,7 +1919,7 @@ Main method
 
 > During class initialization, static fields and static initialization blocks are processed before the `main()` method executes.
 
-[⬆ Back to Static Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1959,7 +1959,7 @@ if (employee instanceof MyMarker) {
 
 > A marker interface is an empty interface used to provide metadata or indicate a special capability of a class.
 
-[⬆ Back to Marker Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -1981,7 +1981,7 @@ class Employee implements Auditable {
 
 Now the application can identify classes that implement `Auditable`.
 
-[⬆ Back to Marker Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -2013,7 +2013,7 @@ It indicates that the class supports cloning through the `Object.clone()` mechan
 
 > Common examples of marker interfaces include `Serializable` and `Cloneable`. They communicate metadata or capabilities to the Java runtime or APIs.
 
-[⬆ Back to Marker Interface Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -2056,7 +2056,7 @@ Examples:
 
 > Annotations are metadata that provide additional information about program elements. They can be processed by the compiler, tools, frameworks, or runtime reflection.
 
-[⬆ Back to Annotation Questions](#-questions)
+[⬆ Back to Questions](#-questions)
 
 ---
 
@@ -2510,6 +2510,3 @@ This improves:
 [⬆ Back to Questions](#-questions)
 
 ---
-
-
-[⬆ Go to OOPs Questions](#-questions)
