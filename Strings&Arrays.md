@@ -321,16 +321,6 @@ Compact String representation
 
 depending on the characters being stored.
 
-### Why is String immutable?
-
-String is immutable so that:
-
-* String Pool objects can be safely shared.
-* Strings can be safely used across threads.
-* Hash codes remain stable.
-* Security-sensitive values cannot be changed through an existing reference.
-* JVM optimizations can safely reuse String objects.
-
 ### Interview Answer
 
 > Historically, String used a `char[]` internally, but modern Java implementations use a `byte[]` with Compact Strings where appropriate. String is immutable so that its value cannot change after creation, enabling safe sharing, String Pool optimization, thread safety, and stable hash codes.
@@ -522,50 +512,6 @@ String pooledString = str.intern();
 ```
 
 `intern()` returns the canonical pooled representation of the String.
-
-### Summary
-
-```text
-String Literal
-       ↓
-String Pool
-
-new String()
-       ↓
-New String Object
-
-char[]
-       ↓
-String
-
-byte[]
-       ↓
-String
-
-StringBuilder
-       ↓
-toString()
-       ↓
-String
-
-StringBuffer
-       ↓
-toString()
-       ↓
-String
-
-concat()
-       ↓
-New String
-
-+
-       ↓
-String Concatenation
-
-intern()
-       ↓
-String Pool
-```
 
 [⬆ Back to Questions](#-questions)
 
