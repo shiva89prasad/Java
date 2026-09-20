@@ -1,11 +1,11 @@
-package myjavaproject;
+package ControlFlowStatement;
 
 import java.util.Scanner;
 
-public class ControlFlowStatement {
+public class StudentGradeManagementSystem {
 	
 	public static void main(String[] args) {
-		//Student Grade Management System
+		//Student Grade Management System using Control flow statement
 		
 		Scanner sc = new Scanner(System.in);
 		String[] studentNames = new String[100];
@@ -72,4 +72,5 @@ public class ControlFlowStatement {
 		}
 		sc.close();
 	}
+
 }
