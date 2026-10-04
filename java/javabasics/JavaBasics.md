@@ -21,6 +21,7 @@ A structured collection of **Core Java Basics interview questions and answers**,
 2. [What is JRE?](#what-is-jre)
 3. [What is JVM?](#what-is-jvm)
 4. [What is the difference between JDK, JRE, and JVM?](#what-is-the-difference-between-jdk-jre-and-jvm)
+5. [Can a Java Application Run Without Installing a JRE?](#can-a-java-application-run-without-installing-a-jre)
 
 # 4. Access Modifiers
 
@@ -43,22 +44,15 @@ A structured collection of **Core Java Basics interview questions and answers**,
 4. [What is `finalize()`?](#what-is-finalize)
 5. [What is the difference between `final`, `finally`, and `finalize()`?](#what-is-the-difference-between-final-finally-and-finalize)
 
-# 7. Java Runtime Environment
-
-1. [Can a Java Application Run Without Installing a JRE?](#can-a-java-application-run-without-installing-a-jre)
-
-# 8. Object-Oriented Nature of Java
+# 7. Object-Oriented Nature of Java
 
 1. [Is Java 100% Object-Oriented?](#is-java-100-object-oriented)
 
-# 9. `System.out.println()`
+# 8. `System.out.println()`
 
 1. [What exactly is `System.out.println()` in Java?](#what-exactly-is-systemoutprintln-in-java)
-2. [What is `System`?](#what-is-system)
-3. [What is `out`?](#what-is-out)
-4. [What is `println()`?](#what-is-println)
 
-# 10. Primitive Data Types & Memory
+# 9. Primitive Data Types & Memory
 
 1. [How are Primitive Data Types Stored in Memory?](#how-are-primitive-data-types-stored-in-memory)
 2. [How is a Local Primitive Variable Stored?](#how-is-a-local-primitive-variable-stored)
@@ -159,9 +153,7 @@ This is commonly described as:
 
 ### 🎯 Interview Answer
 
-> •	Java Compiler converts Source Code (Java Code) to Byte Code.
-•	Byte Code can be run on any OS which has JVM, which enables Write Once Run Anywhere (WORA) capability.
-
+> Java Compiler converts Source Code (Java Code) to Byte Code. Byte Code can be run on any OS which has JVM, which enables Write Once Run Anywhere (WORA) capability.
 
 [⬆ Back to Questions](#-questions)
 
@@ -170,7 +162,6 @@ This is commonly described as:
 ### What is JDK?
 
 **JDK** stands for **Java Development Kit**.
-
 It is used for **developing Java applications** and provides development tools along with the runtime components required to run Java applications.
 
 ### Common JDK tools include:
@@ -205,7 +196,6 @@ Test.class
 ### What is JRE?
 
 **JRE** stands for **Java Runtime Environment**.
-
 Historically, the JRE provided the components required to **run Java applications**, including:
 
 * JVM
@@ -216,10 +206,6 @@ Historically, the JRE provided the components required to **run Java application
 
 Modern Java distributions are generally centered around the **JDK**. Oracle no longer distributes a standalone JRE in the same way it historically did.
 
-### 🎯 Interview Answer
-
-> JRE historically provided the runtime environment required to execute Java applications, including the JVM and Java libraries. With modern Java releases, applications are commonly run using a JDK or a custom runtime image.
-
 [⬆ Back to Questions](#-questions)
 
 ---
@@ -227,10 +213,7 @@ Modern Java distributions are generally centered around the **JDK**. Oracle no l
 ### What is JVM?
 
 **JVM** stands for **Java Virtual Machine**.
-
 The JVM is responsible for **executing Java bytecode**.
-
-Different operating systems have different JVM implementations.
 
 ### Execution Flow
 
@@ -291,9 +274,29 @@ JVM → Execute Bytecode
 
 ---
 
+### Can a Java Application Run Without Installing a JRE?
+
+A Java application needs a **compatible Java runtime** containing the JVM and the required runtime libraries.
+
+Historically, the JRE provided this runtime.
+
+With modern Java, an application can be executed using:
+
+* A JDK
+* A custom runtime image
+* A runtime created using tools such as `jlink`
+
+### 🎯 Interview Answer
+
+> A Java application cannot execute without a compatible Java runtime. Historically this runtime was provided by the JRE; with modern Java, a JDK or custom runtime image can provide the required runtime components.
+
+[⬆ Back to Questions](#-questions)
+
+---
+
 ### What are Access Modifiers in Java?
 
-Access modifiers control the **visibility and accessibility** of classes, methods, constructors, and fields.
+Access modifiers control the **access** of variables, methods, classes, and constructors.
 
 Java provides four access levels:
 
@@ -317,13 +320,9 @@ Java provides four access levels:
 
 ```java
 public class Student {
-
     private int id;
-
     String name;              // default
-
     protected String course;
-
     public String college;
 }
 ```
@@ -332,7 +331,15 @@ public class Student {
 
 ---
 
-### What is the difference between private, default, protected, and public?
+### What is the difference between public, private, protected, and default?
+
+### `public`
+
+Accessible wherever the containing class/member is accessible.
+
+```text
+public → Everywhere
+```
 
 ### `private`
 
@@ -340,16 +347,6 @@ Accessible only within the **same class**.
 
 ```text
 private → Same class
-```
-
-### `default`
-
-Also called **package-private**.
-
-Accessible within the **same package**.
-
-```text
-default → Same package
 ```
 
 ### `protected`
@@ -363,12 +360,12 @@ Accessible:
 protected → Same package + subclass
 ```
 
-### `public`
+### `default`
 
-Accessible wherever the containing class/member is accessible.
+Also called **package-private**. Accessible within the **same package**.
 
 ```text
-public → Everywhere
+default → Same package
 ```
 
 ### Shortcut
@@ -478,9 +475,7 @@ c.equals(d)     → true
 
 ### What is Integer caching?
 
-Java caches certain boxed integer values.
-
-For typical Java implementations, `Integer` values from **-128 to 127** are cached by default.
+Java caches certain boxed integer values. For typical Java implementations, `Integer` values from **-128 to 127** are cached by default.
 
 Example:
 
@@ -550,11 +545,7 @@ x == y → true
 
 ### What is `final`?
 
-The `final` keyword can be used with:
-
-* Variables
-* Methods
-* Classes
+The `final` makes variables, methods and class unchangeable.
 
 ### Final Variable
 
@@ -605,12 +596,10 @@ final class    → Cannot be extended
 ### What is `finally`?
 
 `finally` is a block associated with `try`/`catch`.
-
 It normally executes after the `try`/`catch` processing and is commonly used for cleanup operations such as:
 
-* Closing files
+* Closing files and database connections
 * Releasing resources
-* Closing database connections
 * Cleanup operations
 
 ### Example
@@ -638,9 +627,7 @@ Finally block
 
 ### Can `finally` be prevented from executing?
 
-Yes.
-
-For example, `System.exit(0)` terminates the JVM before the `finally` block can execute.
+Yes. For example, `System.exit(0)` terminates the JVM before the `finally` block can execute.
 
 ```java
 try {
@@ -664,7 +651,6 @@ The JVM terminates before the `finally` block is executed.
 ### What is `finalize()`?
 
 `finalize()` was an old object-finalization mechanism associated with garbage collection.
-
 It was intended to provide an opportunity for cleanup before an object was reclaimed.
 
 However:
@@ -711,26 +697,6 @@ finalize → Legacy finalization
 
 ---
 
-### Can a Java Application Run Without Installing a JRE?
-
-A Java application needs a **compatible Java runtime** containing the JVM and the required runtime libraries.
-
-Historically, the JRE provided this runtime.
-
-With modern Java, an application can be executed using:
-
-* A JDK
-* A custom runtime image
-* A runtime created using tools such as `jlink`
-
-### 🎯 Interview Answer
-
-> A Java application cannot execute without a compatible Java runtime. Historically this runtime was provided by the JRE; with modern Java, a JDK or custom runtime image can provide the required runtime components.
-
-[⬆ Back to Questions](#-questions)
-
----
-
 ### Is Java 100% Object-Oriented?
 
 **No, Java is not 100% object-oriented.**
@@ -762,7 +728,7 @@ Java also has static members that belong to the class rather than to individual 
 
 ### 🎯 Interview Answer
 
-> Java is primarily an object-oriented programming language, but it is not a pure object-oriented language because it supports primitive data types and language features that do not require objects.
+> Java is primarily an object-oriented programming language, but it is not a pure object-oriented language because it supports primitive data types which are not an objects and static members that belong to the class rather than to individual objects.
 
 [⬆ Back to Questions](#-questions)
 
@@ -820,81 +786,6 @@ means that the `println()` method is being called on the `PrintStream` object re
 
 ---
 
-### What is `System`?
-
-`System` is the `java.lang.System` class.
-
-It provides functionality related to:
-
-* Standard input
-* Standard output
-* Standard error
-* System properties
-* Environment information
-* JVM termination
-
-Example:
-
-```java
-System.out.println("Hello");
-```
-
-Here, `System` refers to the `java.lang.System` class.
-
-[⬆ Back to Questions](#-questions)
-
----
-
-### What is `out`?
-
-`out` is a `public static final` field declared in the `System` class.
-
-Its declared type is:
-
-```java
-PrintStream
-```
-
-It refers to the standard output stream.
-
-Conceptually:
-
-```text
-System
-   ↓
-out
-   ↓
-PrintStream
-```
-
-[⬆ Back to Questions](#-questions)
-
----
-
-### What is `println()`?
-
-`println()` is a method of the `PrintStream` class.
-
-It writes the supplied value to the output stream and adds a line separator.
-
-### Example
-
-```java
-System.out.println("Hello");
-System.out.println("Java");
-```
-
-### Output
-
-```text
-Hello
-Java
-```
-
-[⬆ Back to Questions](#-questions)
-
----
-
 ### How are Primitive Data Types Stored in Memory?
 
 Primitive variables store **primitive values directly** rather than object references.
@@ -905,13 +796,17 @@ A common conceptual model is:
 Local variable
       ↓
 Stack Frame
+```
 
+```text
 Instance field
       ↓
 Object
       ↓
 Heap
+```
 
+```text
 Static field
       ↓
 Class-level State
@@ -929,15 +824,14 @@ The exact physical memory layout is **JVM implementation dependent**.
 
 ---
 
-### How is a Local Primitive Variable Stored?
+### How is a Local Variable stored in memory?
 
-A local primitive variable declared inside a method is associated with that method's **stack frame**.
+A local variable declared inside a method and is stored in **stack**.
 
 Example:
 
 ```java
 public static void main(String[] args) {
-
     int a = 10;
 }
 ```
@@ -951,21 +845,18 @@ Stack Frame
 └─────────────┘
 ```
 
-The variable belongs to the current method invocation.
-
 [⬆ Back to Questions](#-questions)
 
 ---
 
-### How is an Instance Variable Stored?
+### How is an Instance Variable stored in memeory?
 
-An instance variable belongs to an object.
+An instance variable declared outside method but inside class and stored in **heap**.
 
 Example:
 
 ```java
 class Student {
-
     int age = 20;
 }
 
@@ -986,23 +877,18 @@ Heap
 └─────────────────┘
 ```
 
-The object and its instance fields are associated with heap memory.
-
-The reference variable `student` belongs to the current stack frame in this conceptual model.
-
 [⬆ Back to Questions](#-questions)
 
 ---
 
 ### How is a Static Variable Stored?
 
-A static variable belongs to the **class**, rather than to an individual object.
+A static variable belongs to the **class**, rather than to an individual object and stored in **method area**.
 
 Example:
 
 ```java
 class Test {
-
     static int count = 50;
 }
 ```
