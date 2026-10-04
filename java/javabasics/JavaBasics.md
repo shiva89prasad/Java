@@ -159,7 +159,9 @@ This is commonly described as:
 
 ### 🎯 Interview Answer
 
-> Java is platform independent because Java source code is compiled into platform-neutral bytecode, and that bytecode is executed by a JVM specific to the underlying operating system.
+> •	Java Compiler converts Source Code (Java Code) to Byte Code.
+•	Byte Code can be run on any OS which has JVM, which enables Write Once Run Anywhere (WORA) capability.
+
 
 [⬆ Back to Questions](#-questions)
 
